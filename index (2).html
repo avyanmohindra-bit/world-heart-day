@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Heart Day Portal</title>
+    <style>
+        :root {
+            --primary-color: #d63031;
+            --bg-color: #ffffff;
+            --text-color: #2d3436;
+            --card-bg: #f8f9fa;
+        }
+
+        [data-theme="accessible"] {
+            --primary-color: #ffff00;
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --card-bg: #1c1c1c;
+        }
+
+        html {
+            font-size: 19px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .a11y-bar {
+            background-color: var(--card-bg);
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .a11y-btn {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            border: 2px solid var(--text-color);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2d3436 100%);
+            color: white;
+        }
+
+        [data-theme="accessible"] header {
+            background: var(--bg-color);
+            border-bottom: 4px dashed var(--primary-color);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .emergency-panel {
+            background-color: #fff5f5;
+            border: 2px solid #feb2b2;
+            color: #9b2c2c;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        [data-theme="accessible"] .emergency-panel {
+            background-color: var(--bg-color);
+            border-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            border: 2px solid var(--text-color);
+            border-radius: 6px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            box-sizing: border-box;
+        }
+
+        .calc-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        [data-theme="accessible"] .calc-btn {
+            color: #000;
+            border: 2px solid var(--primary-color);
+        }
+
+        .result-box {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--bg-color);
+            border-left: 6px solid var(--primary-color);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a11y-bar">
+        <button class="a11y-btn" onclick="toggleContrast()">🌓 Contrast Mode</button>
+    </div>
+
+    <header>
+        <h1>World Heart Day Global Knowledge Center</h1>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 1rem auto 0 auto;">Empowering individuals globally with accurate cardiovascular metrics, risk evaluation data, and protective habits.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>📊 Understanding Cardiovascular Metrics</h2>
+            <p>Knowledge is your first line of defense against cardiovascular disease (CVD). Keep a close watch on these critical biological markers:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Blood Pressure (BP)</h3>
+                    <p>Measures the force of blood pushing against artery walls.</p>
+                    <ul>
+                        <li><strong>Normal:</strong> Under 120/80 mmHg</li>
+                        <li><strong>Elevated:</strong> 120-129 / under 80 mmHg</li>
+                        <li><strong>Hypertension:</strong> 130+/80+ mmHg</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Resting Heart Rate</h3>
+                    <p>The number of times your heart beats per minute while at complete rest.</p>
+                    <ul>
+                        <li><strong>Typical Range:</strong> 60–100 beats per minute</li>
+                        <li><strong>Athletic Range:</strong> 40–60 beats per minute</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Cholesterol Profiles</h3>
+                    <p>Fatty substances in the blood that affect arterial health.</p>
+                    <ul>
+                        <li><strong>HDL (Good):</strong> Helps clear pathways</li>
+                        <li><strong>LDL (Bad):</strong> Can cause plaque blockages</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>❤️ Age-Based Target Heart Rate Calculator</h2>
+            <p>Enter your age below to find your estimated maximum heart rate and active conditioning zones during workouts.</p>
+            
+            <div class="form-group">
+                <label for="age-input">Your Age (Years):</label>
+                <input type="number" id="age-input" min="1" max="120" placeholder="e.g., 25">
+            </div>
+            
+            <button class="calc-btn" onclick="calculateBPM()">Calculate Target Zones</button>
+
+            <div id="result" class="result-box"></div>
+        </section>
+
+        <section>
+            <h2>🚨 Critical Warning Signs & Response</h2>
+            <div class="emergency-panel">
+                <h3>Recognizing an Acute Cardiac Event</h3>
+                <p>Cardiovascular incidents demand rapid response. Watch for these conditions immediately:</p>
+                <ul>
+                    <li><strong>Chest Pain/Pressure:</strong> A feeling of tightness, heavy squeezing, or crushing pain in the center of the chest.</li>
+                    <li><strong>Radiating Pain:</strong> Discomfort spreading outward to the shoulders, neck, jaw, or down the left arm.</li>
+                    <li><strong>Respiratory Distress:</strong> Sudden shortness of breath, with or without chest discomfort.</li>
+                    <li><strong>Systemic Signs:</strong> Cold sweats, unexpected dizziness, or sudden lightheadedness.</li>
+                </ul>
+                <p><strong>Action Step:</strong> If these signs appear, do not wait. Call emergency services immediately. Quick intervention preserves heart muscle tissue.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleContrast() {
+            const body = document.body;
+            if (body.hasAttribute('data-theme')) {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'accessible');
+            }
+        }
+
+        function calculateBPM() {
+            const age = document.getElementById('age-input').value;
+            const resultBox = document.getElementById('result');
+
+            if (!age || age <= 0 || age > 120) {
+                resultBox.style.display = 'block';
+                resultBox.innerHTML = '<strong style="color:var(--primary-color);">Please enter a valid age between 1 and 120.</strong>';
+                return;
+            }
+
+            const maxHR = 220 - parseInt(age);
+            const lowTarget = Math.round(maxHR * 0.50);
+            const highTarget = Math.round(maxHR * 0.85);
+
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `
+                <h3>Your Heart Rate Summary:</h3>
+                <p>Estimated Max Heart Rate: <strong>${maxHR} bpm</strong></p>
+                <p>Target Exercise Zone (50% - 85% intensity): <strong>${lowTarget} bpm to ${highTarget} bpm</strong></p>
+                <p><small>Always adjust your physical activity to a level that feels safe and comfortable for your body.</small></p>
+            `;
+        }
+    </script>
+</body>
+</html>
